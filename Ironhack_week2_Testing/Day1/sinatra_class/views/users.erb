@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link href="/style.css" rel="stylesheet" />
+<title></title>
+</head>
+<body>
+	<p>Hi <%= @username %></p>
+
+	<ul>
+	<% @list.each do |item| %>
+		<li><%= item %></li>
+	<% end %>
+	</ul>
+
+	<a href="/">Home</a>
+</body>
+</html>
+

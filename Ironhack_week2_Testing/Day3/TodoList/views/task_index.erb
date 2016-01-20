@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>All Tasks</title>
+</head>
+<body>
+	
+	<ul>
+	<% @tasks.each do |task| %>
+		<li><%= task.content %>
+		<% if task.completed == true %>
+		<p>Completed</p>
+		<% else %>
+		<a 
+		href="/completed" value="completed">Complete
+		</a>
+		<% end %>
+		</li>
+	<% end %>
+	</ul>
+
+	<h1><a href="/new_task">New Task</a></h1>
+</body>
+</html>

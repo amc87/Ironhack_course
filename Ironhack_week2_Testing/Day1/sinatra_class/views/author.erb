@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link href="/style.css" rel="stylesheet" />
+<title></title>
+</head>
+<body>
+
+	
+	<p>
+	Today is:
+	<%= @time %>
+	</p>
+	<ul>
+		<% @shopping_list.each do |element| %>
+		<li><%= element %></li>
+		<% end %>
+
+		<img src="/programmer1.jpg">
+	</ul>
+	<p>Time <%= @hours_ago %> hour(s) ago:</p>
+	<p><%= @hour %> </p>
+	<p><%= @username %> </p>
+
+</body>
+</html>

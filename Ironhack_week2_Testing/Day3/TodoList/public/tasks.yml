@@ -1,0 +1,20 @@
+---
+Josh:
+- !ruby/object:Task
+  content: hola
+  id: 1
+  completed: false
+  created_at: 2016-01-20 19:29:08.581471000 +01:00
+  updated_at: 
+- !ruby/object:Task
+  content: que tal
+  id: 2
+  completed: false
+  created_at: 2016-01-20 19:29:13.172545000 +01:00
+  updated_at: 
+- !ruby/object:Task
+  content: que ase!
+  id: 3
+  completed: false
+  created_at: 2016-01-20 19:29:19.171357000 +01:00
+  updated_at: 

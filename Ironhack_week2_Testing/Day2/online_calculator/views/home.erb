@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>HOME</title>
+</head>
+<body>
+<h3>Operate</h3>
+		<form action="/operate" method="POST">
+	  	<input type="number" name="number1" placeholder="First Number" value="<%= @read unless @read.nil? %>"> 
+	 	>
+		<input type="number" name="number2" placeholder="Second Number">
+		<button type="submit" name="operation" value="+">ADD</button>
+		<button type="submit" name="operation" value="-">SUBSTRACT</button>
+		<button type="submit" name="operation" value="*">MULTIPLY</button>
+		<button type="submit" name="operation" value="/">DIVIDE</button>
+		</form>	
+
+		<h1>
+		<%= @result_calc %>
+		</h1>
+
+		<% if @result != nil %>
+		<form action="/save" method="POST">
+			<button type="submit" name="saver" value="<%= @result_calc %>">Save</button>
+		</form>
+		<% end %>
+</body>
+</html>
