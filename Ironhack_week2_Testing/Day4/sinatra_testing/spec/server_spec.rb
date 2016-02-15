@@ -1,0 +1,37 @@
+require "./server"
+
+require "rspec"
+
+require "rack/test"
+
+describe "Super Awesome Server" do
+	include Rack::Test::Methods
+
+
+	def app
+		Sinatra::Application
+	end
+
+	it "should load the homepage" do
+		get "/"
+		expect(last_response).to be_ok
+	end
+
+	it "should not load the homepage" do
+		get "/this_should_not_work"
+		expect(last_response).to_not be_ok
+	end
+
+	it "should load the other page" do
+		get "/real_page"
+		expect(last_response).to be_ok
+	end
+
+	it "should redirect to the real_page" do
+		get "/hi"
+		expect(last_response.redirect?).to be(true)
+		follow_redirect!
+		expect(last_request.path).to eq("/real_page")
+	end
+
+end

@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Choose a word!</title>
+</head>
+<body>
+<h3>Hi, <%= @name %></h3>
+	<h1>Please choose a word:</h1>
+	<form action="/search" method="POST">
+		<input type="text" name="word">
+		<button>Search!</button>
+	</form>
+</body>
+</html>

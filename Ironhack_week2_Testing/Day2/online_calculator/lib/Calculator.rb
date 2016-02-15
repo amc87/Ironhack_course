@@ -21,10 +21,3 @@ class Writing
 	end
 
 end
-
-class Reading
-	def initialize
-		
-		
-	end
-end
